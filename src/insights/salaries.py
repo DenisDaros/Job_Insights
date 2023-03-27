@@ -3,6 +3,7 @@ from src.insights.jobs import read
 
 file = "data/jobs.csv"
 
+
 def get_max_salary(path: str) -> int:
     table = read(path)
     all_max_salary = set()
@@ -10,7 +11,7 @@ def get_max_salary(path: str) -> int:
         if i["max_salary"].isnumeric():
             all_max_salary.add(int(i["max_salary"]))
     return max(all_max_salary)
-            
+
 
 def get_min_salary(path: str) -> int:
     table = read(path)
