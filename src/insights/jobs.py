@@ -5,11 +5,13 @@ import csv
 
 file = "data/jobs.csv"
 
+
 @lru_cache
 def read(path: str) -> List[Dict]:
     with open(path) as table:
         table_list = list(csv.DictReader(table))
         return table_list
+
 
 def get_unique_job_types(path: str) -> List[str]:
     """Checks all different job types and returns a list of them
