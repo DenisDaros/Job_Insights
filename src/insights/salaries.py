@@ -23,7 +23,7 @@ def get_min_salary(path: str) -> int:
 
 
 def matches_salary_range(job: Dict, salary: Union[int, str]) -> bool:
-    try: 
+    try:
         max_salary = int(job["max_salary"])
         min_salary = int(job["min_salary"])
 
